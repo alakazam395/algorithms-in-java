@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LinearSearchAlgorithmTest {
+public class LinearSearchTest {
     private final int[] arr = { 2, 3, 4, 10, 40 };
 
     @DisplayName("Test check for search success")
@@ -13,7 +13,7 @@ public class LinearSearchAlgorithmTest {
     public void linearSearchAlgorithmCheckSuccess() {
         int x = 4;
         int expected = 2;
-        int result = LinearSearchAlgorithm.search(arr, arr.length, x);
+        int result = LinearSearch.search(arr, arr.length, x);
         if (result == -1)
             System.out.println("Element is not present in array");
         else
@@ -29,7 +29,7 @@ public class LinearSearchAlgorithmTest {
     public void linearSearchAlgorithmCheckFailed() {
         int x = 10;
         int expected = 0;
-        int result = LinearSearchAlgorithm.search(arr, arr.length, x);if (result == -1)
+        int result = LinearSearch.search(arr, arr.length, x);if (result == -1)
             System.out.println("Element is not present in array");
         else
             System.out.println("Element is present at index " + result);
